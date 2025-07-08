@@ -1,0 +1,105 @@
+Shell Theme: 
+
+ls ~/.posh/themes/
+# Make sure you have the JSON file for the them e in here! than run ->
+
+echo 'eval "$(oh-my-posh init bash --config ~/.posh/themes/1_shell.json)"' >> ~/.bashrc
+source ~/.bashrc
+
+# Starting Juice Shop with Docker: 
+sudo apt install docker.io -y
+sudo systemctl enable --now docker
+docker run -d -p 3000:3000 bkimminich/juice-shop
+# open http://localhost:3000/#/
+
+# GitHub Public Key in this directtory: 
+sudo mv /root/.ssh/id_ed25519 ~/.ssh/
+sudo mv /root/.ssh/id_ed25519.pub ~/.ssh/
+sudo chown $USER:$USER ~/.ssh/id_ed25519*
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+ssh -T git@github.com
+
+
+
+# VENV
+py -m venv my_env
+source my_env/bin/activate
+deactivate
+
+
+# VERSIONS
+python -m django --version
+
+# herausfidnen wer eien Port belegt 
+sudo lsof -i :5432
+
+# Neuen Branch erstellen und direkt wechseln
+git checkout -b commented-branch
+
+# Zu bestehendem Branch wechseln
+git checkout main
+git checkout commented-branch
+
+git branch        # lokale Branches
+git branch -a     # alle Branches inkl. Remote
+
+# Zum ersten Mal pushen mit Upstream-Zuordnung
+git push -u origin commented-branch
+
+# Weitere Pushes
+git push
+
+# .env zur .gitignore hinzufügen
+echo ".env" >> .gitignore
+
+# Datei aus dem Git-Index entfernen (aber behalten)
+git rm --cached .env
+
+# Branches mergen
+git checkout main
+git merge commented-branch
+
+
+# DOCKER Container erstellen
+sudo docker run --name=blog_db \
+  -e POSTGRES_DB=blog \
+  -e POSTGRES_USER=blog \
+  -e POSTGRES_PASSWORD=1702 \
+  -p 5433:5432 \
+  -d postgres:16.2
+
+# Container starten / stoppen
+sudo docker start blog_db
+sudo docker stop blog_db
+
+# Container Löschen 
+sudo docker rm -f blog_db
+
+# Laufende Container anzeigen 
+sudo docker ps         # nur laufende
+sudo docker ps -a      # alle, auch gestoppte
+
+# In Container einloggen (psql z. B.)
+sudo docker exec -it blog_db psql -U blog -d blog
+
+
+
+# 1. Alte Neovim-Konfig nach Git-Verzeichnis kopieren
+cp -r ~/.config/nvim ~/Desktop/Programming/Configs/configs/Nvim
+
+# 2. Alte systemweite Neovim-Konfig löschen
+rm -rf ~/.config/nvim
+
+# 3. Symlink setzen (achte auf das doppelte "nvim" im Pfad!)
+ln -s ~/Desktop/Programming/Configs/configs/Nvim/nvim ~/.config/nvim
+
+# 4. Link prüfen (optional)
+ls -l ~/.config/nvim
+
+# 5. Neovim starten (testen, ob alles funktioniert)
+nvim
+
+

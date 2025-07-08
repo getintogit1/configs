@@ -1,0 +1,24 @@
+
+
+run:
+sudo nano /etc/systemd/system/backup-before-shutdown.service
+
+Copy this in the created file:
+[Unit]
+Description=Backup Home to Intenso before shutdown
+DefaultDependencies=no
+Before=poweroff.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/sam/backup_to_intenso.sh
+TimeoutSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=halt.target reboot.target poweroff.target
+
+
+Activate the new service:
+sudo systemctl enable backup-before-shutdown.service
+

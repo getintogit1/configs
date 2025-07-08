@@ -1,7 +1,7 @@
  local M = {}
 
  M.base46 = {
-   theme = "aylin",
+   theme = "ayu_light",
    transparency = false,
 options = {
   cursorline = true,      -- highlights current line
