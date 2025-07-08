@@ -26,3 +26,11 @@ than click on your bash in top left corner on :
 edit -> preferences -> text -> click cutom font -> select your font
 it should NOT be a Mono Font
 when its not showing up, close your terminal and open a new one.
+
+3. git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+git clone git@github.com:yourusername/your-nvim-repo.git /tmp/your-nvim
+rm -rf ~/.config/nvim
+mkdir -p ~/.config/nvim
+cp -r ~/Desktop/Programming/configs/Nvim/nvim/* ~/.config/nvim/
+nvim 
+
