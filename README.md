@@ -7,3 +7,5 @@
 - echo 'eval "$(oh-my-posh init bash --config ~/.posh/themes/amro.omp.json)"' >> ~/.bashrc
 - source ~/.bashrc
   Finished
+
+2. Install A Mono nerdfont
