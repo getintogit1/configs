@@ -9,3 +9,20 @@
   Finished
 
 2. Install A Mono nerdfont
+EIther:
+oh-my-posh font install
+oh-my-posh font install meslo
+
+Or for more customization:
+visit: https://www.nerdfonts.com/font-downloads
+ANd downloa dhere a custom font you like
+
+Create:
+mkdir -p ~/.local/share/fonts
+copy your files into here
+than: run: 
+fc-cache -fv
+than click on your bash in top left corner on :
+edit -> preferences -> text -> click cutom font -> select your font
+it should NOT be a Mono Font
+when its not showing up, close your terminal and open a new one.
