@@ -1,6 +1,8 @@
+<img width="3840" height="1080" alt="image" src="https://github.com/user-attachments/assets/c25700e6-8b8e-4219-94de-0dcd2cd67a49" />
 
-terminal Example:
-<img width="818" height="539" alt="image" src="https://github.com/user-attachments/assets/e0f2034d-ad58-4540-b1a8-ec02316e5232" />
+<img width="1898" height="997" alt="image" src="https://github.com/user-attachments/assets/23d7083d-7a1c-41dd-8d10-c1b2ad3d2570" />
+
+
 
 Follow these three easy steps to get your Linux terminal and Neovim configured with NvCHad and extendible for cusmoization!
 # Terminal & Neovim Environment Setup
