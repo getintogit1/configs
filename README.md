@@ -6,7 +6,7 @@
 
 
 
-Follow these three easy steps to get your Linux terminal and Neovim configured with NvCHad and extendible for cusmoization!
+Follow these three easy steps to get your Linux terminal and Neovim configured with NvCHad and extendible for customization!
 # Terminal & Neovim Environment Setup
 
 Follow these three clear steps to get your Linux terminal and Neovim configured exactly as described.
